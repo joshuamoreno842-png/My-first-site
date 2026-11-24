@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<title>Joshua Moreno Site </title>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me - Joshua Moreno</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>About Me</h1>
+        <p>Welcome to my personal website!</p>
+    </header>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About Me</a>
+        <a href="#interests">Interests</a>
+        <a href="#skills">Skills</a>
+        <a href="#goals">Goals</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <section id="home" class="active">
+        <h2>Hello! I'm Joshua Moreno</h2>
+        <div class="profile">
+            <img src="picmo.jpg" alt="Profile">
+        </div>
+        <p>I am a BSIT student who enjoys learning about technology, coding, and computers. This website is about my background, hobbies, skills, and future goals.</p>
+    </section>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>My name is Joshua Moreno. I am a college student who likes learning new things and trying different activities. I believe that learning and practicing can help me improve.</p>
+        <h3>Educational Background</h3>
+        <p>I am currently taking Bachelor of Science in Information Technology (BSIT). I am learning about programming, web development, and computer technology.</p>
+    </section>
+
+    <section id="interests">
+        <h2>My Interests</h2>
+        <ul>
+            <li><strong>Coding:</strong> I enjoy learning how to create programs and websites.</li>
+            <li><strong>Boxing and Fitness:</strong> I like training because it helps me become disciplined.</li>
+            <li><strong>Volleyball:</strong> I enjoy playing sports and working with a team.</li>
+        </ul>
+    </section>
+
+    <section id="skills">
+        <h2>My Skills</h2>
+        <ul>
+            <li><strong>Basic Programming</strong> - I can create simple programs and practice coding.</li>
+            <li><strong>HTML and CSS</strong> - I am learning how to build and design websites.</li>
+            <li><strong>Teamwork</strong> - I can cooperate and share ideas with other people.</li>
+            <li><strong>Learning More Programming Languages</strong> - I am eager to explore additional programming languages that can help in my skill and make use of it.</li>
+        </ul>
+    </section>
+
+    <section id="goals">
+        <h2>My Goals</h2>
+        <h3>Short-Term Goals</h3>
+        <p>My short-term goals are to improve my coding skills, pass my subjects, and finish my school projects.</p>
+        <h3>Long-Term Goals</h3>
+        <p>My long-term goals are to graduate from college, get a good job, support my family, and become a successful IT professional.</p>
+        <h3>Future Career</h3>
+        <p>In the future, I want to work in the field of Information Technology and continue learning about new technologies. And make millions with my skills.</p>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <p>Name: Joshua Moreno</p>
+        <p>Email: joshuamoreno842@gmail.com</p>
+        <p><em>Mindset is a dangerous weapon a human naturally acquired, yet people are not aware of its power. -joshua moreno(2026).</em></p>
+    </section>
+
+    <footer>
+        <p>© 2026 Joshua Moreno | My Personal Website</p>
+    </footer>
+
+
+    <script>
+    const links = document.querySelectorAll("nav a");
+    const sections = document.querySelectorAll("section");
+
+    links.forEach(link => {
+        link.addEventListener("click", function(event) {
+            event.preventDefault();
+
+            const target = this.getAttribute("href").substring(1);
+
+            sections.forEach(section => {
+                section.classList.remove("active");
+            });
+
+            const selectedSection = document.getElementById(target);
+
+            if (selectedSection) {
+                selectedSection.classList.add("active");
+            }
+        });
+    });
+</script>
+</body>
+</html>
